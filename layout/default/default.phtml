@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <title>Index</title>
+   <?= $this->helper->css('lib/bootstrap.css') ?>
+   <?= $this->helper->css('lib/font-awesome.css') ?>
+   <?= $this->helper->css('styles.css') ?>
+</head>
+<body>
+<?= $this->helper->content('Common/header') ?>
+<div class="container">
+   <div class="row">
+      <?= $this->helper->content() ?>
+   </div>
+</div>
+<?= $this->helper->js('lib/jquery-3.3.1.min.js') ?>
+<?= $this->helper->js('lib/popper.min.js') ?>
+<?= $this->helper->js('lib/boostrap.min.js') ?>
+</body>
+</html>
