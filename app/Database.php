@@ -6,7 +6,7 @@ class Database {
       "driver" => "mysql",
       "host" => "localhost",
       "port" => "3306",
-      "db" => "framework",
+      "db" => "vaulti",
       "user" => "root",
       "pass" => "",
       "charset" => "utf8"

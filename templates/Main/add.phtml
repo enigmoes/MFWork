@@ -1,0 +1,57 @@
+<div class="row">
+   <div class="col-md-12 mt-5">
+      <h3 class="text-center">Add Action</h3>
+      <p class="text-center">
+         <a href="<?= $this->Helper->url(['controller' => 'main']) ?>" class="btn btn-link">
+            Back Action
+         </a>
+      </p>
+   </div>
+</div>
+<div class="row">
+   <div class="offset-md-3 col-md-6">
+      <form action="/main/add" method="POST">
+         <input type="hidden" id="post_token" name="post_token" value="<?= $this->request->token ?>">
+         <div class="card">
+               <div class="card-header">
+                  Información Usuario
+               </div>
+               <div class="card-body">
+                  <div class="form-floating mb-3">
+                     <input type="text" class="form-control" id="name" name="users[name]" 
+                        value="<?= !is_null($this->request->getData('name')) ? $this->request->getData('name') : '' ?>">
+                     <label for="name">Nombre</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                     <input type="text" class="form-control" id="lastname" name="users[lastname]" 
+                        value="<?= !is_null($this->request->getData('lastname')) ? $this->request->getData('lastname') : '' ?>">
+                     <label for="lastname">Apellido</label>
+                  </div>
+               </div>
+         </div>
+         <hr class="my-4">
+         <div class="card">
+               <div class="card-header">
+                  Acceso Usuario
+               </div>
+               <div class="card-body">
+                  <div class="form-floating mb-3">
+                     <input type="email" class="form-control" id="email" name="users[email]" 
+                        value="<?= !is_null($this->request->getData('email')) ? $this->request->getData('email') : '' ?>">
+                     <label for="email">Email</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                     <input type="text" class="form-control" id="password" name="users[password]" value="">
+                     <label for="password">Contraseña</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                     <input type="text" class="form-control" id="password_confirm" name="users[password_confirm]" value="">
+                     <label for="password_confirm">Confirmar contraseña</label>
+                  </div>
+               </div>
+         </div>
+
+         <button type="submit" class="btn btn-primary mt-3">Guardar</button>
+      </form>
+   </div>
+</div>

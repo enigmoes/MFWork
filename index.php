@@ -1,3 +1,3 @@
 <?php
 
-require 'wwwroot' . DIRECTORY_SEPARATOR . 'index.php';
+require 'www' . DIRECTORY_SEPARATOR . 'index.php';

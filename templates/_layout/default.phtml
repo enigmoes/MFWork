@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <title><?= isset($title) ? $title : 'Default' ?></title>
+   <?= $this->Helper->css('../vendor/bootstrap/css/bootstrap.min.css') ?>
+   <?= $this->Helper->css('../vendor/font-awesome/css/all.min.css') ?>
+   <?= $this->Helper->css('styles.css') ?>
+
+   <?= $this->Helper->fetch('css') ?>
+</head>
+<body>
+<?= $this->Helper->content('_common/header') ?>
+<div class="container">
+   <?= $this->Helper->content() ?>
+</div>
+<?= $this->Helper->js('../vendor/bootstrap/js/bootstrap.bundle.min.js') ?>
+<?= $this->Helper->js('../vendor/font-awesome/js/all.min.js') ?>
+
+<?= $this->Helper->fetch('js') ?>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<div class="row">
+   <div class="col-md-12 mt-5">
+      <h1 class="text-center">WELCOME TO MICRO FRAMEWORK</h1>
+      <p class="text-center"><?= $var ?></p>
+      <p class="text-center">
+         <a href="<?= $this->Helper->url(['controller' => 'main', 'action' => 'add']) ?>" class="btn btn-link">
+            Add Action
+         </a>
+      </p>
+      <p class="text-center">
+         <a href="<?= $this->Helper->url(['controller' => 'main', 'action' => 'edit', 1]) ?>" class="btn btn-link">
+            Edit Action
+         </a>
+      </p>
+      <p class="text-center">
+         <a href="<?= $this->Helper->url(['controller' => 'main', 'action' => 'users']) ?>" class="btn btn-link">
+            View users
+         </a>
+      </p>
+   </div>
+</div>
+<?= $this->Helper->js('main.js', 'js') ?>
